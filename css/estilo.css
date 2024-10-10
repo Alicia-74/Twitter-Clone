@@ -1,0 +1,31 @@
+body {
+  font-family: 'Helvetica Neue', Arial, 'Roboto', sans-serif;
+}
+
+
+
+.custom-shadow {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según sea necesario */
+}
+
+.custom-rounded {
+  border-radius: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+ 
+ 
+ /* Fondo negro por defecto para el input */
+  #password {
+    background-color: rgb(8, 8, 8); /* Fondo negro */
+    /*border: 1px solid #007bff;  /*Borde azul opcional */
+    font-size:15px;
+} 
+ 
+ /* Cambiar el fondo a gris al enfocarse */
+ #password:focus {
+     background-color: rgb(19, 22, 24); /* Fondo gris */
+     /*border: 1px solid #007bff; /* Opcional: mantiene el color del borde */
+     font-size:15px;
+ }
+
+ 
