@@ -5,7 +5,7 @@ body {
 
 
 .custom-shadow {
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según sea necesario */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según sea necesario */
 }
 
 .custom-rounded {

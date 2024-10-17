@@ -14,7 +14,7 @@
 
         if (password_verify($pass, $usuario["password"])) {
             $_SESSION["user"] = $usuario;
-            header("Location: welcome.php");
+            header("Location: ../main/tweets.php");
         } else {
             $_SESSION["error_login"] = "Login incorrect";
             header("Location: ../index.php");
