@@ -41,51 +41,32 @@
     <link rel="shortcut icon" href="media/icon/favicon.png" type="image/xpng">
 
     <!-- Titulo -->
-    <title>Tweets</title>
+    <title>Todos los Tweets</title>
 
 </head>
 <body>
     <div class="container mt-5">
-        <h1><?=$_SESSION['user']['username']?></h1>
-        <h6> 
-            Email: <?= $_SESSION['user']['email'] ?><br>
-            Fecha de creación: <?= $_SESSION['user']['createDate'] ?><br>
-            Descripción: <?= $_SESSION['user']['description'] ?>  
-        </h6>
+    <a href="perfil.php"><h1><?=$_SESSION['user']['username']?></h1></a>
+
+
+        <!-- Botones para cambiar de página -->
+        <div>
+            <a href="tweets.php" class="btn btn-primary mt-2 mb-2" style="border-radius: 50px; font-weight: bold;">inicio</a>
+            <a href="todos_tweets.php" class="btn btn-primary mt-2 mb-2" style="border-radius: 50px; font-weight: bold;">Todos</a>
+            <a href="tweets.php" class="btn btn-primary mt-2 mb-2" style="border-radius: 50px; font-weight: bold;">Todos</a>
+        </div>
+        
 
         <!-- Formulario para escribir un nuevo tweet -->
         <form action="post_tweet.php" method="POST" class="mb-4">
             <div class="form-group">
-                <textarea id="tweet" name="tweet" class="form-control mt-2" rows="3" placeholder="Escribe tu nuevo tweet" required></textarea>
+                <textarea id="text" name="text" class="form-control mt-2" rows="3" placeholder="Escribe tu nuevo tweet" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-2" style="border-radius: 50px; font-weight: bold;">Publicar Tweet</button>
+            <button type="submit" name="submit" class="btn btn-primary mt-2" style="border-radius: 50px; font-weight: bold;">Publicar Tweet</button>
         </form>
-        <a href="../sesion/logout.php" class="btn btn-danger mt-4" style="border-radius: 50px; font-weight: bold;">Cerrar Sesión</a>
-       <?php
-            // Obtener tweets de las personas que sigues
-           // $sql= "SELECT  u.username, publ.createDate, publ.text 
-               // FROM publications AS publ
-               // JOIN follows AS f
-                //ON (f.userToFollowId = publ.userId) 
-                //JOIN users AS u
-               // ON (u.id = publ.userId) 
-               // WHERE f.users_id = ?
-               // ORDER BY publ.createDate DESC;";
-                
-           // $query=mysqli_query($connect, $sql);
-            //$row=mysqli_fetch_array($query);
-        ?> 
-
-        <!-- Mostrar tweets de las personas que sigues -->
-         <div class="tweets">
-            <?php while ($row = mysqli_fetch_array($query)): ?>
-                <div class="tweet">
-                    <span class="username"><?= $row['username'] ?></span>
-                    <p><?= $row['text'] ?></p>
-                    <span class="timestamp"><?= $row['createDate'] ?></span>
-                </div>
-            <?php endwhile; ?>
-        </div>
+        
+       
+       
 
         <a href="../sesion/logout.php" class="btn btn-danger mt-4" style="border-radius: 50px; font-weight: bold;">Cerrar Sesión</a>
     </div>
