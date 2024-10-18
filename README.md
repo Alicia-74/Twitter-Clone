@@ -19,6 +19,7 @@ Además el proyecto está desplegado con Azure.
 
 - **PHP**
 - **MySQL**
+- **Azure**
 - **Bootstrap**
 - **HTML/CSS**
-- **Azure**
+
